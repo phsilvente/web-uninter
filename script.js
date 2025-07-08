@@ -1,5 +1,4 @@
-// Oculta todos os elementos de conteúdo e remove a seleção de todos os botões do menu
-function ocultarTudo() {
+function limpar() {
 
 
     elementos = document.getElementsByClassName("conteudo");
@@ -17,17 +16,15 @@ function ocultarTudo() {
 }
 
 
-// Exibe apenas o conteúdo selecionado e ativa o botão respectivo
 function mostrar(secao, botao) {
     
-    ocultarTudo();
+    limpar();
     
     document.getElementById(secao).removeAttribute("hidden");
     document.getElementById(botao).setAttribute("selecionado", true);
 }
 
 
-// Verifica se o formulário foi preenchido e exibe uma mensagem no navegador
 function botaoFormulario() {
 
 
@@ -38,10 +35,10 @@ function botaoFormulario() {
 
     if (nome == "" || email == "" || mensagem == "") {
         // Formulário incompleto
-        window.alert("Ops, formulário incompleto.")
+        window.alert("Formulário incompleto.")
     } else {
         // Formulário completo
-        window.alert("Olá, " + nome + "! Este formulário não está ativo, mas obrigado pela visita!");
+        window.alert("Catapimbas! Esse formulário é fake.");
     }
 
 
