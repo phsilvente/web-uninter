@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paulo Henrique Silvente Pereira</title>
+        <!-- IMPORTAR FONTES E ICONES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chat,newsstand,person,work_history" />
+        <!-- IMPORTAR CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- IMPORTAR JAVASCRIPT -->
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+
+        <!-- CABEÇALHO -->
+        <div id="cabecalho">
+            <div class="nome">
+                <p>Olá, eu sou o<br><b>Paulo Henrique Silvente Pereira</b>.</p>
+            </div>
+            <!-- MENU DE OPÇÕES -->
+            <div class="menu">
+                <div id="botaoSobre" class="opcaoMenu" onclick="mostrar('sobre', 'botaoSobre');" selecionado="selecionado">
+                    <span class="material-symbols-outlined">person</span>
+                    <p>Sobre Mim</p>
+                </div>
+                <div id="botaoFormacao" class="opcaoMenu" onclick="mostrar('formacao', 'botaoFormacao')">
+                    <span class="material-symbols-outlined">work_history</span>
+                    <p>Experiência</p>
+                </div>
+                <div id="botaoPortfolio" class="opcaoMenu" onclick="mostrar('portfolio', 'botaoPortfolio')">
+                    <span class="material-symbols-outlined">newsstand</span>
+                    <p>Portfolio</p>
+                </div>
+                <div id="botaoContato" class="opcaoMenu" onclick="mostrar('contato', 'botaoContato')">
+                    <span class="material-symbols-outlined">chat</span>
+                    <p>Contato</p>
+                </div>
+            </div>  
+        </div>
+
+
+        <!-- SOBRE MIM -->
+         <div id="sobre" class="conteudo">
+            <p class="titulo_secao">Sobre Mim</p><br>
+            <p>Nascido em Presidente Prudente, SP.</p>
+            <p>Desenhista desde que me conheço por gente, tenho mais facilidade de expressar minhas idéias rabiscando formas, e não palavras.</p>
+            <p>Naturalmente curioso e observador, gosto de tentar entender o funcionamento das ferramentas digitais e dos jogos que costumo passar horas incontáveis explorando.</p>
+            <p>Atualmente trabalho com ilustração digital, iconografia, interface e elementos gráficos para jogos. </p> 
+            <br>
+         </div>
+
+
+        <!-- FORMAÇÃO & EXPERIÊNCIA -->
+        <div id="formacao" class="conteudo" hidden>
+            <p class="titulo_secao">Formação & Experiência</p><br>
+            <p><b>Sprite Artist</b>, Elderan Online</p>
+            <p class="observacao"> 2023 - Atual</p>
+            <ul>
+                <li>Ilustrador</li>
+                <li>Desenvolvimento de Elementos Gráficos</li>
+                <li>Designer Gráfico</li>
+            </ul>
+        </div>
+
+
+        <!-- PORTFOLIO -->
+        <div id="portfolio" class="conteudo" hidden>
+            <p class="titulo_secao">Portfolio</p><br>
+            GitHub: <a href="https://www.artstation.com/phsilvente">https://www.artstation.com/phsilvente</a>
+            <br><br>
+        </div>
+
+
+        <!-- CONTATO -->
+         <div id="contato" class="conteudo" hidden>
+            <p class="titulo_secao">Contato</p><br>
+            <!-- NOME, EMAIL, MENSAGEM -->
+            <form action="submit">
+                <label for="form_name">Nome</label>
+                <input type="text" name="Nome" id="form_nome">
+                <br>
+                <label for="form_email">Email</label>
+                <input type="email" name="Email" id="form_email">
+                <br>
+                <label for="form_mensagem">Mensagem</label>
+                <textarea name="Mensagem" id="form_mensagem" rows="10"></textarea>
+                <br>
+                <input class="botaoFormulario" type="button" value="Enviar Mensagem" onclick="botaoFormulario();">
+                <br>
+            </form>
+         </div>
+    </body>
+</html>
